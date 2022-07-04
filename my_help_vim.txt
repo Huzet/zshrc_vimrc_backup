@@ -1,0 +1,39 @@
+Vim help
+
+Vim 
+// Scrolling
+^E      - scroll down window
+^Y  - scroll up window
+^F      - scroll down page 
+^B  - scroll up page
+H       - mover cursor top
+M       - move cursor middle
+L       - move cursor low
+
+//Motions
+a       -all
+i       -in
+t       -till
+f       -find forward
+F       -find backward
+.       -repeat motion
+
+//Commands
+d       -delete
+c       -change (deletes and puts you in 
+y       -yank
+v       -visual
+
+//Common Motions
+diw      - delete in word
+yi)      - yank in parenthesis
+di]      - delete in bracket
+da]      - delete bracket dt - delete till sapce
+
+//Tabs
+:newtab  - creates new tab  
+gt      - switch between tabs
+
+
+
+^w      -switching windows)

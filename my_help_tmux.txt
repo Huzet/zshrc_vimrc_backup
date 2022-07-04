@@ -1,0 +1,17 @@
+TMUX
+//general
+^b          -tmux key
+^b z        -focus window
+^b %        -vertical split
+^b "        -horizontal split
+^b c        -create window
+^b w        -list windw
+^b  ,       -rename window
+^b .        -find window name
+
+//copy and paste with mouse
+highlight  -with mouse
+^b ]        -will paste
+
+//command mode
+:resize-pane -L 20"

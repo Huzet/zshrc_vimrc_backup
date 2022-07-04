@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""
+
 " Vimrc file                    "
 "                               "
 "                               "
@@ -16,6 +16,9 @@ set path+=**
 set wildmenu
 " Syntax highlighting
 syntax enable 
+set termguicolors
+" ColorSchemes 
+colorscheme desert
 " Number lines
 set number relativenumber
 " Set tab width to 4 columns.
@@ -27,12 +30,11 @@ set noswapfile
 " Scroll down all the way down 
 set scrolloff=8
 " Show a visual line under the cursor's current line
-set cursorline
+set cursorline 
+:highlight Cursorline cterm=bold ctermbg=black
 " }
 
 " ------Python Set Up{
-" Tabs are 4 spaces
-set ts=4
 " Indent functionality
 set autoindent
 set smartindent
@@ -42,7 +44,7 @@ set shiftwidth=4
 " Show the matching part of the pair for [] {} and ()
 set showmatch
 " Enable all Python syntax highlighting features
-" let python_highlight_all = 1
+let python_highlight_all = 1
 " Auto complete 
 inoremap { {}<Esc>ha
 inoremap ( ()<Esc>ha
@@ -57,10 +59,11 @@ inoremap ` ``<Esc>ha
 set hlsearch
 " Ignore case in searches
 set ignorecase
+set smartcase
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
-" Search does not stay highlighted
-set hlsearch
+" Search does not stay highlighted why esc is typed twice
+nnoremap <esc><esc> :noh<return>
 " }
 
 
@@ -94,10 +97,13 @@ set mouse=a
 "-------netrw file browser" {
 filetype plugin on
 " give tree
-let g:netrw_liststyle=3 "tree view
+let g:netrw_liststyle = 3
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
-" keep directory whily browsing
 let g:netrw_keepdir = 0
 " }
 
@@ -117,4 +123,10 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
 "  }
+
+" -------Cursor settings {
+:hi TabLineFill ctermfg=Black
+:hi TabLine ctermfg=Green
+"  }
+
 
