@@ -1,13 +1,15 @@
-
+"""""""""""""""""""""""""""""""""
 " Vimrc file                    "
 "                               "
-"                               "
+
 "                               "
 "                               "
 "Chekko                         "
 """""""""""""""""""""""""""""""""
 
 " -------Basic config stuff {
+" ColorSchemes 
+colorscheme desert
 " Enter vim no vi
 set nocompatible
 " Allows tab completion for all files
@@ -17,8 +19,6 @@ set wildmenu
 " Syntax highlighting
 syntax enable 
 set termguicolors
-" ColorSchemes 
-colorscheme desert
 " Number lines
 set number relativenumber
 " Set tab width to 4 columns.
@@ -31,7 +31,7 @@ set noswapfile
 set scrolloff=8
 " Show a visual line under the cursor's current line
 set cursorline 
-:highlight Cursorline cterm=bold ctermbg=black
+:highlight Cursorline  ctermbg=black
 " }
 
 " ------Python Set Up{
@@ -86,7 +86,7 @@ set statusline+=%=
 " Status line right side.
 set statusline+=\row:\ %l\ col:\ %c\ percent:\ %p%%
 " Show the status on the second to last line.
-set laststatus=2
+"set laststatus=2
 " }
 
 " ------Mouse {
@@ -129,4 +129,9 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 :hi TabLine ctermfg=Green
 "  }
 
+
+" -------Text writing {
+" Spell check
+"set spell spelllang=en_us
+"  }
 

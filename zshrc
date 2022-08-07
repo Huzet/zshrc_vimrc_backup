@@ -5,7 +5,7 @@
 ##########################
 
 # Welcome message
-printf "⠀
+printf "%b""⠀
 ⠀⠀⠀⠀⣴⠉⡙⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⣚⡯⠴⢬⣱⡀⠀
 ⠀⠀⠀⠀⢰⡇⣷⡌⢲⣄⡑⢢⡀⠀⠀⠀⠀⠀⢠⠾⢋⠔⣨⣴⣿⣷⡌⠇⡇⠀
 ⠀⠀⠀⠀⢸⢹⣿⣿⣄⢻⣿⣷⣝⠷⢤⣤⣤⡶⢋⣴⣑⠟⠿⠿⠿⣿⣿⡀⡇⠀
@@ -27,6 +27,10 @@ printf "⠀
 # Prompt 
 PROMPT="%F{cyan}%. %? >%f"
 autoload -U promptinit && promptinit
+autoload -U colors && colors
+
+# terminal text color
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Alias
 alias ~="cd ~" 
