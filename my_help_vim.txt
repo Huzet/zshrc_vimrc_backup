@@ -32,8 +32,15 @@ da]      - delete bracket dt - delete till sapce
 
 //Tabs
 :newtab  - creates new tab  
-gt      - switch between tabs
+gt       - switch between tabs
+^w       - switching windows)
+
+//NERDtree
+:cd + CD - change directory
+
+//Buffers
+ls          - list buffers add ! to see unlisted buffers
+:buffer<#>  - switch to buffer
+:sbuffer    - split buffer
 
 
-
-^w      -switching windows)

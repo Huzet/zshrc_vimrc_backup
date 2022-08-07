@@ -86,7 +86,7 @@ set statusline+=%=
 " Status line right side.
 set statusline+=\row:\ %l\ col:\ %c\ percent:\ %p%%
 " Show the status on the second to last line.
-"set laststatus=2
+set laststatus=2
 " }
 
 " ------Mouse {
@@ -134,4 +134,11 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 " Spell check
 "set spell spelllang=en_us
 "  }
-
+"
+" -------NERDtree{
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber""
+"  }
+"
