@@ -1,4 +1,6 @@
 TMUX
+tmux attach-session -t0
+
 //general
 ^b          -tmux key
 ^b z        -focus window
@@ -8,6 +10,7 @@ TMUX
 ^b w        -list windw
 ^b  ,       -rename window
 ^b .        -find window name
+^b d        -detach session
 
 //copy and paste with mouse
 highlight  -with mouse
