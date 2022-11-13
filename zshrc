@@ -69,3 +69,6 @@ autoload -Uz compinit && compinit
 
 # Enable vim command line
 bindkey -v
+if [[ $TERM == xterm ]]; then
+    TERM=xterm-256color
+fi

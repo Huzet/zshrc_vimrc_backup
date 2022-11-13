@@ -1,1 +1,16 @@
-/Users/tomas/my_help_tmux.txt
+TMUX
+//general
+^b          -tmux key
+^b z        -focus window
+^b %        -vertical split
+^b "        -horizontal split
+^b c        -create window
+^b w        -list windw
+cb  ,       -rename window
+
+//copy and paste with mouse
+highlight  -with mouse
+^b ]        -will paste
+
+//command mode
+:resize-pane -L 20"

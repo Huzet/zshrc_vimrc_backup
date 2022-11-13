@@ -1,28 +1,29 @@
 """""""""""""""""""""""""""""""""
 " Vimrc file                    "
 "                               "
-
 "                               "
 "                               "
 "Chekko                         "
 """""""""""""""""""""""""""""""""
 
 " -------Basic config stuff {
-" ColorSchemes 
-colorscheme desert
+" Set leader key to spacebar
+nnoremap <SPACE> <Nop>
+let mapleader="\<Space>"
 " Enter vim no vi
 set nocompatible
-" Allows tab completion for all files
-set path+=**
 " Enable auto completion menu after pressing TAB
 set wildmenu
+set path+=**
 " Syntax highlighting
 syntax enable 
-set termguicolors
 " Number lines
 set number relativenumber
-" Set tab width to 4 columns.
-set tabstop=4
+" Set tabs.
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
 " Use space characters instead of tabs.
 set expandtab
 " gets rid of swap files
@@ -32,26 +33,32 @@ set scrolloff=8
 " Show a visual line under the cursor's current line
 set cursorline 
 :highlight Cursorline  ctermbg=black
+" keep buffer
+set hidden 
+" get rid of error bells
+set noerrorbells
+" scroll when 8 lines from top/bottom screen
+set scrolloff=8
+" extra column
+set signcolumn=yes
+" tmux color compatibility
+set term=screen-256color
+" set visualbell off 
+set visualbell
+" Copy and pasting
+noremap <Leader>yy "*yy
+noremap <Leader>y "*y
+noremap <Leader>p "*p
 " }
 
 " ------Python Set Up{
 " Indent functionality
 set autoindent
 set smartindent
-set smarttab
-" When using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
 " Show the matching part of the pair for [] {} and ()
 set showmatch
 " Enable all Python syntax highlighting features
 let python_highlight_all = 1
-" Auto complete 
-inoremap { {}<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
 " }
 
 " ------Search {
@@ -134,11 +141,32 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 " Spell check
 "set spell spelllang=en_us
 "  }
-"
+
+
+" -------Plugins{
+call plug#begin()
+  Plug 'preservim/nerdtree'
+  Plug 'gruvbox-community/gruvbox'
+  Plug 'francoiscabrol/ranger.vim'
+
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+"  }
+" Powerline
+let g:airline#extensions#tabline#enabled = 1
+" ColorSchemes 
+colorscheme desert
+colorscheme gruvbox 
 " -------NERDtree{
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber""
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 "  }
-"
+
