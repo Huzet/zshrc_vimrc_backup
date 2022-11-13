@@ -41,6 +41,7 @@ alias vscode='open -a Visual\ Studio\ Code'
 alias safari='open -a safari' 
 alias codedir="cd ~/projects/code/"
 alias ll="ls -lah"
+alias copy_git_dotfiles="cp ~/.zshrc /Users/tomas/Documents/zshrc_vimrc_backup/zshrc; cp ~/.vimrc /Users/tomas/Documents/zshrc_vimrc_backup/vimrc; cp ~/my_help_tmux.txt /Users/tomas/Documents/zshrc_vimrc_backup/my_help_tmux.txt; cp ~/my_help_vim.txt /Users/tomas/Documents/zshrc_vimrc_backup/my_help_vim.txt; cp ~/.tmux.conf /Users/tomas/Documents/zshrc_vimrc_backup/tmux.conf"
 
 # My help is for commands I am trying to learn and rememeber
 alias my_help_vim="cat my_help_vim.txt"
