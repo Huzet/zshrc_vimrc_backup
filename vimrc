@@ -50,7 +50,7 @@ noremap <Leader>yy "*yy
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 " VIM stop writing comments for me
-autocmd FileType * set formatoptions-=cro
+set paste
 " }
 
 " ------Python Set Up{
